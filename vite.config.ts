@@ -10,5 +10,5 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-  }, // Dodajemy asercję typów, żeby uniknąć błędu TS
+  },
 })
