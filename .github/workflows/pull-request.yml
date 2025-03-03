@@ -8,7 +8,7 @@ on:
 jobs:
   pr-check:
     environment:
-      name: 'Preview'
+      name: "Preview"
     runs-on: macos-latest
     steps:
       - name: Checkout repository
@@ -26,7 +26,7 @@ jobs:
       - name: Deploy app to Vercel preview env
         uses: ./.github/actions/deploy-vercel
         with:
-          mode: 'preview'
+          mode: "preview"
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
