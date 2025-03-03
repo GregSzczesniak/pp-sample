@@ -3,15 +3,15 @@ description: Deploy Vercel in two modes
 
 inputs:
   vercel-token:
-    description: 'Vercel token'
+    description: "Vercel token"
     required: true
   mode:
-    description: 'Deployment mode'
+    description: "Deployment mode"
     required: true
-    default: 'production'
+    default: "production"
 
 runs:
-  using: 'composite'
+  using: "composite"
   steps:
     - name: Install Vercel CLI
       run: npm install --global vercel@canary

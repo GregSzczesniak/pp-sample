@@ -1,0 +1,17 @@
+name: Quality Check
+description: Checks code formatting and tests verification
+
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Configure node
+      uses: ./.github/actions/setup-project
+
+    - name: Run format check
+      run: npm run format -- --check
+    
+    - name: Run unit tests
+      run: npm run test
